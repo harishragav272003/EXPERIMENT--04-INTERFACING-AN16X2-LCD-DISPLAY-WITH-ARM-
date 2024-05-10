@@ -17,8 +17,7 @@ interfaces Datasheet - production data Features
 1), and DSP instructions
 • Memories – Up to 256 Kbytes of Flash memory – Up to 64 Kbytes of SRAM
 
-
-   ## LCD 16X2 
+ ## LCD 16X2 
    16×2 LCD is named so because; it has 16 Columns and 2 Rows. There are a lot of combinations available like,
    8×1, 8×2, 10×2, 16×1, etc. But the most used one is the 16*2 LCD, hence we are using it here.
 
@@ -99,21 +98,14 @@ Activate second line
 08
 
 Display OFF, cursor OFF
-
 C1
-
 Jump to second line, position 1
-
 OC
-
 Display ON, cursor OFF
 
 C1
-
 Jump to second line, position 1
-
 C2
-
 Jump to second line, position 2
  
 ## Procedure:
@@ -173,7 +165,6 @@ https://engineeringxpert.com/wp-content/uploads/2022/04/26.png
 ## CIRCUIT DIAGRAM 
 ![image](https://user-images.githubusercontent.com/36288975/233857974-bda6200e-4f88-4e7b-b189-4da80210fa23.png)
 
-
 ## STM 32 CUBE PROGRAM :
 ```
 DEVELOPED BY: HARISH RAGAV S
@@ -201,19 +192,16 @@ int main(void)
  Lcd_cursor(&lcd, 0,3);
  Lcd_string(&lcd, "HARISH RAGAV S");
 ```
-
 ## Output screen shots of proteus  :
 ### LCD ON :
  ![pmc-exp-4-surendhar](https://github.com/Surendhar6/EXPERIMENT--04-INTERFACING-AN16X2-LCD-DISPLAY-WITH-ARM-/assets/118352907/a856b594-6c0a-41a7-9714-3ea5fd1b4569)
 
 ### LCD OFF :
 ![image](https://github.com/Surendhar6/EXPERIMENT--04-INTERFACING-AN16X2-LCD-DISPLAY-WITH-ARM-/assets/118352907/bcb404f5-6cfb-4efc-83de-fad564ad9d36)
-
  
  ## CIRCUIT DIAGRAM (EXPORT THE GRAPHICS TO PDF AND ADD THE SCREEN SHOT HERE): 
  ![image](https://github.com/Surendhar6/EXPERIMENT--04-INTERFACING-AN16X2-LCD-DISPLAY-WITH-ARM-/assets/118352907/31674343-989a-4d07-93b5-69f9db1332a6)
 
- 
 ## Result :
 Interfacing a lcd display with ARM microcontroller are simulated in proteus and the results are verified.
 
