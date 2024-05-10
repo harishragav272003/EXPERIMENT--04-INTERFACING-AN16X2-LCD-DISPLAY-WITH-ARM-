@@ -1,8 +1,12 @@
 # EXPERIMENT--04-INTERFACING-AN16X2-LCD-DISPLAY-WITH-ARM AND DISPLAY STRING
 
 
- ## Aim: To Interface a 16X2 LCD display to ARM controller  , and simulate it in Proteus 
-## Components required: STM32 CUBE IDE, Proteus 8 simulator .
+ ## Aim: 
+ To Interface a 16X2 LCD display to ARM controller  , and simulate it in Proteus 
+ 
+## Components required: 
+STM32 CUBE IDE, Proteus 8 simulator .
+
 ## Theory 
 The full form of an ARM is an advanced reduced instruction set computer (RISC) machine, and it is a 32-bit processor architecture expanded by ARM holdings. The applications of an ARM processor include several microcontrollers as well as processors. The architecture of an ARM processor was licensed by many corporations for designing ARM processor-based SoC products and CPUs. This allows the corporations to manufacture their products using ARM architecture. Likewise, all main semiconductor companies will make ARM-based SOCs such as Samsung, Atmel, TI etc.
 
@@ -173,15 +177,44 @@ https://engineeringxpert.com/wp-content/uploads/2022/04/26.png
 
 
 ## STM 32 CUBE PROGRAM :
+```
+DEVELOPED BY: HARISH RAGAV S
+REG. NO : 212222110013
+```
+```
+#include "main.h"
+#include "lcd.h"
+void SystemClock_Config(void);
+static void MX_GPIO_Init(void);
+int main(void)
+{
+  HAL_Init();
+  SystemClock_Config();
+  MX_GPIO_Init();
+ Lcd_PortType ports[] = {GPIOA,GPIOA,GPIOA,GPIOA};
+ Lcd_PinType pins[] = {GPIO_PIN_3,GPIO_PIN_2,GPIO_PIN_1,GPIO_PIN_0};
+ Lcd_HandleTypeDef lcd;
+ lcd = Lcd_create(ports,pins,GPIOB,GPIO_PIN_0,GPIOB,GPIO_PIN_1,LCD_4_BIT_MODE);
+ Lcd_cursor(&lcd, 1,0);
+ Lcd_string(&lcd, "CSE(IOT)");
+ Lcd_cursor(&lcd, 1,9);
+ Lcd_string(&lcd, "2ndYEAR");
 
-
-
+ Lcd_cursor(&lcd, 0,3);
+ Lcd_string(&lcd, "HARISH RAGAV S");
+```
 
 ## Output screen shots of proteus  :
- 
+### LCD ON :
+ ![pmc-exp-4-surendhar](https://github.com/Surendhar6/EXPERIMENT--04-INTERFACING-AN16X2-LCD-DISPLAY-WITH-ARM-/assets/118352907/a856b594-6c0a-41a7-9714-3ea5fd1b4569)
+
+### LCD OFF :
+![image](https://github.com/Surendhar6/EXPERIMENT--04-INTERFACING-AN16X2-LCD-DISPLAY-WITH-ARM-/assets/118352907/bcb404f5-6cfb-4efc-83de-fad564ad9d36)
+
  
  ## CIRCUIT DIAGRAM (EXPORT THE GRAPHICS TO PDF AND ADD THE SCREEN SHOT HERE): 
- 
+ ![image](https://github.com/Surendhar6/EXPERIMENT--04-INTERFACING-AN16X2-LCD-DISPLAY-WITH-ARM-/assets/118352907/31674343-989a-4d07-93b5-69f9db1332a6)
+
  
 ## Result :
 Interfacing a lcd display with ARM microcontroller are simulated in proteus and the results are verified.
